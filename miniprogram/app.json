@@ -18,7 +18,7 @@
     "backgroundColor": "red",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "唐健荣个人页面",
+    "navigationBarTitleText": "唐健荣个人",
     "navigationBarTextStyle": "black"
   },
   "debug": true,

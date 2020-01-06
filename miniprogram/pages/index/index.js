@@ -7,7 +7,13 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    do: "上传图片",
+    arr: [1,2,3],
+    view: "tang",
+    staffA: { firstName: 'Hulk', lastName: 'Hu' },
+    staffB: { firstName: 'Shang', lastName: 'You' },
+    staffC: { firstName: 'Gideon', lastName: 'Lin' }
   },
 
   onLoad: function () {
@@ -64,7 +70,7 @@ Page({
       },
       fail: err => {
         console.error('[云函数] [login] 调用失败', err)
-        wx.navigateTo({s
+        wx.navigateTo({
           url: '../deployFunctions/deployFunctions',
         })
       }

@@ -19,7 +19,23 @@
   <!-- 上传图片 -->
   <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">
-      <text>上传图片</text>
+      <text>{{do}}</text>
+
+      <text wx:for="{{arr}}">{{item}}</text>
+
+      <text wx:if="{{view == 'tang'}}">唐健荣</text>
+      <text wx:elif="{{view == 'wen'}}">温家奇</text>
+      <text wx:else="{{view == 'tan'}}">谭星</text>
+
+      <template name="staffName">
+        <view>
+          FirstName: {{firstName}}, LastName: {{lastName}}
+        </view>
+      </template>
+      <template is="staffName" data="{{...staffA}}"></template>
+      <template is="staffName" data="{{...staffB}}"></template>
+      <template is="staffName" data="{{...staffC}}"></template>
+
     </view>
     <view class="uploader-container" wx:if="{{imgUrl}}">
       <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
